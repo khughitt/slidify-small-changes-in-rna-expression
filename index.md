@@ -77,6 +77,20 @@ Figure 1: Example fold changes for markers of early immune response
 
 ---
 
+## Question: What is the average fold change cutoff used?
+
+### Approach
+>- Sampled 10 papers for which FC filtering was used.
+
+### Result
+>- Papers used a cutoff of either 1.5 or 2.0. ($\mu = 1.725$)
+>- Authors also suggest, however, that based on MAQC study results, microarrays
+   tend to underestimate the actual FC compared with qRTPCR (Canales et al. 
+   2006).
+>- Adjusted microarray cutoff likely closer to 3.45.
+
+---
+
 ## Question: Which statistical methods work best for detecting low FC genes?
 
 ### Approach
@@ -115,9 +129,16 @@ the 23 inflammation-related GO categories.
 >3. <span class='red'>Conclusion</span>: Existing methods are sufficient to
     detect biologically meaningful enrichment at low FC.
 
----
+--- .references
 
 ## References
+
+
+
+
+
+- Roger D Canales, Yuling Luo, James C Willey, Bradley Austermiller, Catalin C Barbacioru, Cecilie Boysen, Kathryn Hunkapiller, Roderick V Jensen, Charles R Knight, Kathleen Y Lee, Yunqing Ma, Botoul Maqsodi, Adam Papallo, Elizabeth Herness Peters, Karen Poulter, Patricia L Ruppel, Raymond R Samaha, Leming Shi, Wen Yang, Lu Zhang, Federico M Goodsaid,   (2006) Evaluation of Dna Microarray Results With Quantitative Gene Expression Platforms.  <em>Nature Biotechnology</em>  <strong>24</strong>  1115-1122  <a href="http://dx.doi.org/10.1038/nbt1236">10.1038/nbt1236</a>
+- Georges St. Laurent, Dmitry Shtokalo, Michael R. Tackett, Zhaoqing Yang, Yuri Vyatkin, Patrice M. Milos, Bernd Seilheimer, Timothy A. McCaffrey, Philipp Kapranov,   (2013) on The Importance of Small Changes in Rna Expression.  <em>Methods</em>  <strong>63</strong>  18-24  <a href="http://dx.doi.org/10.1016/j.ymeth.2013.03.027">10.1016/j.ymeth.2013.03.027</a>
 
 
 <!-- Custom JavaScript -->
