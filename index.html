@@ -62,7 +62,7 @@
     .references li { font-size: 18px; }
 </style>
 
-<h2>Background</h2>
+<h2>Introduction</h2>
 
   </article>
   <!-- Presenter Notes -->
@@ -109,10 +109,7 @@ information?</li>
     <h2>Approach</h2>
   </hgroup>
   <article>
-    <p>Figure 1: Example fold changes for markers of early immune response</p>
-
-<p><img src="assets/img/1-s2.0-S1046202313000960-gr1.jpg" alt="Fig1"></p>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -129,7 +126,7 @@ information?</li>
 
       <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Question: How often are p-value and/or FC cutoffs applied?</h2>
+    <h2>Question 1: How often are p-value and/or FC cutoffs applied?</h2>
   </hgroup>
   <article>
     <h3>Approach</h3>
@@ -153,7 +150,7 @@ will be missed.</li>
 
       <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Question: What is the average fold change cutoff used?</h2>
+    <h2>Question 2: What is the average fold change cutoff used?</h2>
   </hgroup>
   <article>
     <h3>Approach</h3>
@@ -178,7 +175,70 @@ tend to underestimate the actual FC compared with qRTPCR (Canales et al.
 
       <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Question: Which statistical methods work best for detecting low FC genes?</h2>
+    <h2>Question 3: How much of the biologically significant differentially expressed genes have low FC?</h2>
+  </hgroup>
+  <article>
+    <h3>Approach</h3>
+
+<ul class = "build">
+<li>Looked at data from inflammation time course SMS RNA-Seq study.</li>
+<li>Compared control and 3hr mice using Student&#39;s t-test. Genes with increased
+expression and p-value &lt;= 0.01 treated as DE.
+
+<ul>
+<li><span class='blue'>1419 genes</span></li>
+</ul></li>
+<li>Filtered list for genes with inflammation-related GO annotations
+
+<ul>
+<li>Used 23 such GO categories shown to be statistically enriched, e.g. &quot;Cell
+activation&quot;, &quot;Cytokine production&quot;, &quot;Regulation of Cytokine production&quot;,
+&quot;Immune System Process&quot;, etc.</li>
+<li><span class='blue'>640 genes</span> remaining after filtering.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Question 3: How much of the biologically significant differentially expressed genes have low FC?</h2>
+  </hgroup>
+  <article>
+    <h3>Result</h3>
+
+<ul class = "build">
+<li>Median FC: <span class='blue'>1.91-fold</span></li>
+<li><span class='red2'>More than half of the genes (344/640) were upregulated 
+by less than 2-fold</span></li>
+<li>Estimated FDR for 640 genes: 8.6%.</li>
+<li>59 genes with FC 5x and 15 genes with 10x FC</li>
+<li>Using adjusted microarray FC cutoff, this would mean that ~83% of actual
+DE genes would be missed.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <p>Figure 1: Example fold changes for markers of early immune response</p>
+
+<p><img src="assets/img/1-s2.0-S1046202313000960-gr1.jpg" alt="Fig1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Question XX: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
     <h3>Approach</h3>
@@ -211,9 +271,9 @@ multiple testing with the Benjamini-Hochberg correction.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-8" style="background:;">
+      <slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>Question: Which statistical methods work best for detecting low FC genes?</h2>
+    <h2>Question XX: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
     <h3>Result</h3>
@@ -249,7 +309,17 @@ detect biologically meaningful enrichment at low FC.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="references" id="slide-9" style="background:;">
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="references" id="slide-13" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>

@@ -28,7 +28,7 @@ mode        : selfcontained # {standalone, draft}
     .references li { font-size: 18px; }
 </style>
 
-## Background
+## Introduction
 
 ---
 
@@ -54,9 +54,6 @@ mode        : selfcontained # {standalone, draft}
 
 ## Approach
 
-Figure 1: Example fold changes for markers of early immune response
-
-![Fig1](assets/img/1-s2.0-S1046202313000960-gr1.jpg)
 
 --- .segue .dark
 
@@ -64,7 +61,7 @@ Figure 1: Example fold changes for markers of early immune response
 
 ---
 
-## Question: How often are p-value and/or FC cutoffs applied?
+## Question 1: How often are p-value and/or FC cutoffs applied?
 
 ### Approach
 >- Pulled 40 most recent papers in PubMed for query "microarray expression
@@ -77,7 +74,7 @@ Figure 1: Example fold changes for markers of early immune response
 
 ---
 
-## Question: What is the average fold change cutoff used?
+## Question 2: What is the average fold change cutoff used?
 
 ### Approach
 >- Sampled 10 papers for which FC filtering was used.
@@ -91,7 +88,41 @@ Figure 1: Example fold changes for markers of early immune response
 
 ---
 
-## Question: Which statistical methods work best for detecting low FC genes?
+## Question 3: How much of the biologically significant differentially expressed genes have low FC?
+
+### Approach
+>- Looked at data from inflammation time course SMS RNA-Seq study.
+>- Compared control and 3hr mice using Student's t-test. Genes with increased
+   expression and p-value <= 0.01 treated as DE.
+    * <span class='blue'>1419 genes</span>
+>- Filtered list for genes with inflammation-related GO annotations
+    * Used 23 such GO categories shown to be statistically enriched, e.g. "Cell
+      activation", "Cytokine production", "Regulation of Cytokine production",
+      "Immune System Process", etc.
+    * <span class='blue'>640 genes</span> remaining after filtering.
+
+---
+
+## Question 3: How much of the biologically significant differentially expressed genes have low FC?
+
+### Result
+>- Median FC: <span class='blue'>1.91-fold</span>
+>- <span class='red2'>More than half of the genes (344/640) were upregulated 
+   by less than 2-fold</span>
+>- Estimated FDR for 640 genes: 8.6%.
+>- 59 genes with FC 5x and 15 genes with 10x FC
+>- Using adjusted microarray FC cutoff, this would mean that ~83% of actual
+   DE genes would be missed.
+
+---
+
+Figure 1: Example fold changes for markers of early immune response
+
+![Fig1](assets/img/1-s2.0-S1046202313000960-gr1.jpg)
+
+---
+
+## Question XX: Which statistical methods work best for detecting low FC genes?
 
 ### Approach
 >1. Compared performance of six different methods for detecting genes with < 2
@@ -112,7 +143,7 @@ the 23 inflammation-related GO categories.
 
 ---
 
-## Question: Which statistical methods work best for detecting low FC genes?
+## Question XX: Which statistical methods work best for detecting low FC genes?
 
 ### Result
 
@@ -128,6 +159,10 @@ the 23 inflammation-related GO categories.
     - p-value: <1E-50
 >3. <span class='red'>Conclusion</span>: Existing methods are sufficient to
     detect biologically meaningful enrichment at low FC.
+
+---
+
+
 
 --- .references
 
