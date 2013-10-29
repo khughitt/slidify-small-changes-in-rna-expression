@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="libraries/frameworks/io2012/js/slides" 
     src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
@@ -36,15 +36,34 @@
         <h2>St Laurent, G., Shtokalo, D., Tackett, M.R., Yang, Z., Vyatkin, Y. Milos, P.M., Seilheimer, B., McCaffrey, T.A., Kapranov, P.</h2>
         <p>Keith Hughitt<br/></p>
       </hgroup>
+      <a href="https://github.com/khughitt/slidify-small-changes-in-rna-expression/zipball/gh-pages" class="example">
+        Download
+      </a>
           </slide>
 
     <!-- SLIDES -->
       <slide class="segue dark" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Background</h2>
+    
   </hgroup>
   <article>
-    
+    <!-- Custom Styles -->
+
+<style type='text/css'>
+    slides > slide {
+        height: 800px;
+        margin-top: -400px;
+    }
+    img {
+        max-height: 560px;
+        max-width: 964px;
+    }
+    slide a {border-bottom: none;}
+    .references li { font-size: 18px; }
+</style>
+
+<h2>Background</h2>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -95,7 +114,17 @@ information?</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-4" style="background:;">
+      <slide class="segue dark" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Results</h2>
   </hgroup>
@@ -108,32 +137,94 @@ information?</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    
-  </hgroup>
-  <article>
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
       <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>References</h2>
+    <h2>Question: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
-    
+    <h3>Approach</h3>
+
+<ol class = "build">
+<li>Compared performance of six different methods for detecting genes with &lt; 2
+FC:
+
+<ul>
+<li>edgeR</li>
+<li>t-test</li>
+<li>DESeq</li>
+<li>baySeq</li>
+<li>Welch&#39;s test</li>
+<li>NOIseq</li>
+</ul></li>
+<li><span class='blue'>Performance metric</span>: Enrichment of a subset of
+the 23 inflammation-related GO categories.
+
+<ul>
+<li>For each method, sorted genes by p-value, selected top 2000 genes, and
+selected upregulated genes with FC &lt; 2.</li>
+<li>GO enrichment evaluated using the Fisher exact test, adjusted for
+multiple testing with the Benjamini-Hochberg correction.</li>
+<li>Control: randomized timepoints</li>
+</ul></li>
+</ol>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
       <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    
+    <h2>Question: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
-    
+    <h3>Result</h3>
+
+<ol class = "build">
+<li>Overall, methods all performed pretty similarly:
+
+<ul>
+<li><span class='blue'>Number genes</span>
+
+<ul>
+<li>355 (DESeq)</li>
+<li>410 (edgeR)</li>
+</ul></li>
+<li><span class='blue'>p-value (Immune system response)</span>
+
+<ul>
+<li>4.36E-41 (baySeq)</li>
+<li>3.91E-47 (t-test)</li>
+</ul></li>
+</ul></li>
+<li>Best method, however: Keep any gene found by at least one of the methods
+
+<ul>
+<li>631 genes</li>
+<li>p-value: &lt;1E-50</li>
+</ul></li>
+<li><span class='red'>Conclusion</span>: Existing methods are sufficient to
+detect biologically meaningful enrichment at low FC.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article>
+    <!-- Custom JavaScript -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
