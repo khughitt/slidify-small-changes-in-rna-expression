@@ -199,6 +199,31 @@ Table 3: Enrichment of inflammation-related GO categories vs. FC level
 2. Even the group with the lowest fold change (1-1.4) has fairly significant
    enrichment for some GO terms.
 
+---
+
+## Question 6: What is the effect of having less replicates on detecting low FC DE genes?
+
+### Approach
+>1. Starting with 7 replicates (inidividual mice) in control and 3h time points,
+    progressively removed 1 replicate.
+>2. Proceeded until 2 replicates for each condition remained.
+>3  Measured effect on power to detect low FC DE genes.
+
+---
+
+## Question 6: What is the effect of having less replicates on detecting low FC DE genes?
+
+Figure 2. Number of replicates vs. enrichment of inflammation-related GO terms
+for transcripts with less than 2 FC.
+![Fig2](assets/img/1-s2.0-S1046202313000960-gr2.jpg)
+
+---
+
+## Question 6: What is the effect of having less replicates on detecting low FC DE genes?
+
+Table 4. Effect of reducing replicates on low FC genes.
+![Table4](assets/img/table4.png)
+
 --- .references
 
 ## References
