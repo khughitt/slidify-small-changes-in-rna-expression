@@ -122,7 +122,7 @@ Figure 1: Example fold changes for markers of early immune response
 
 ---
 
-## Question XX: Which statistical methods work best for detecting low FC genes?
+## Question 4: Which statistical methods work best for detecting low FC genes?
 
 ### Approach
 >1. Compared performance of six different methods for detecting genes with < 2
@@ -143,7 +143,7 @@ the 23 inflammation-related GO categories.
 
 ---
 
-## Question XX: Which statistical methods work best for detecting low FC genes?
+## Question 4: Which statistical methods work best for detecting low FC genes?
 
 ### Result
 
@@ -162,7 +162,42 @@ the 23 inflammation-related GO categories.
 
 ---
 
+## Question 5: How low of an FC is relevant?
 
+### Approach
+
+>1. Took top 2000 DE transcripts found in any of the 5 statistical methods
+    tested.
+>2. Sorted genes by FC and split into six  ~equal-sized groups:
+    * 1 - 1.4 (177 genes)
+    * 1.4 - 1.6 (179 genes)
+    * 1.6 - 1.9 (204 genes)
+    * 1.9 - 2.4 (196 genes)
+    * 2.4 - 3.5 (184 genes)
+    * 3.5+ (188 genes)
+
+>3. Tested each group for enrichment.
+
+---
+
+## Question 5: How low of an FC is relevant?
+
+### Result
+
+>1. FC >= 3.5 ha most significant p-value for "Inflammatory response" 
+    (p=$3.2 x 10^-32$), however,
+>2. For other GO terms, lower FC groups had higher enrichment.
+
+---
+
+Table 3: Enrichment of inflammation-related GO categories vs. FC level
+
+![Table 3](assets/img/table3.png)
+
+1. Group with most significant mean p-value across the seven GO terms is
+   the <span class='red'>1.6-1.9 fold change</span> group.
+2. Even the group with the lowest fold change (1-1.4) has fairly significant
+   enrichment for some GO terms.
 
 --- .references
 

@@ -238,7 +238,7 @@ DE genes would be missed.</li>
 
       <slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>Question XX: Which statistical methods work best for detecting low FC genes?</h2>
+    <h2>Question 4: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
     <h3>Approach</h3>
@@ -273,7 +273,7 @@ multiple testing with the Benjamini-Hochberg correction.</li>
 
       <slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>Question XX: Which statistical methods work best for detecting low FC genes?</h2>
+    <h2>Question 4: Which statistical methods work best for detecting low FC genes?</h2>
   </hgroup>
   <article>
     <h3>Result</h3>
@@ -311,15 +311,69 @@ detect biologically meaningful enrichment at low FC.</li>
 
       <slide class="" id="slide-12" style="background:;">
   <hgroup>
-    
+    <h2>Question 5: How low of an FC is relevant?</h2>
   </hgroup>
   <article>
-    
+    <h3>Approach</h3>
+
+<ol class = "build">
+<li>Took top 2000 DE transcripts found in any of the 5 statistical methods
+tested.</li>
+<li><p>Sorted genes by FC and split into six  ~equal-sized groups:</p>
+
+<ul>
+<li>1 - 1.4 (177 genes)</li>
+<li>1.4 - 1.6 (179 genes)</li>
+<li>1.6 - 1.9 (204 genes)</li>
+<li>1.9 - 2.4 (196 genes)</li>
+<li>2.4 - 3.5 (184 genes)</li>
+<li>3.5+ (188 genes)</li>
+</ul></li>
+<li><p>Tested each group for enrichment.</p></li>
+</ol>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="references" id="slide-13" style="background:;">
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Question 5: How low of an FC is relevant?</h2>
+  </hgroup>
+  <article>
+    <h3>Result</h3>
+
+<ol class = "build">
+<li>FC &gt;= 3.5 ha most significant p-value for &quot;Inflammatory response&quot; 
+(p=\(3.2 x 10^-32\)), however,</li>
+<li>For other GO terms, lower FC groups had higher enrichment.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <p>Table 3: Enrichment of inflammation-related GO categories vs. FC level</p>
+
+<p><img src="assets/img/table3.png" alt="Table 3"></p>
+
+<ol>
+<li>Group with most significant mean p-value across the seven GO terms is
+the <span class='red'>1.6-1.9 fold change</span> group.</li>
+<li>Even the group with the lowest fold change (1-1.4) has fairly significant
+enrichment for some GO terms.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="references" id="slide-15" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
