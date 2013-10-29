@@ -54,17 +54,26 @@ mode        : selfcontained # {standalone, draft}
 
 ## Approach
 
+Figure 1: Example fold changes for markers of early immune response
+
+![Fig1](assets/img/1-s2.0-S1046202313000960-gr1.jpg)
+
 --- .segue .dark
 
 ## Results
 
 ---
 
-## Results
+## Question: How often are p-value and/or FC cutoffs applied?
 
-Figure 1: Example fold changes for markers of early immune response
+### Approach
+>- Pulled 40 most recent papers in PubMed for query "microarray expression
+   profiling" (...It would be interesting to know results for "RNA-Seq")
 
-![Fig1](assets/img/1-s2.0-S1046202313000960-gr1.jpg)
+### Result
+>- At least 50% of studied applied a FC cutoff (the rest used p-values only)
+>- This means that any biologically relevant DE genes below the FC cutoff
+   will be missed.
 
 ---
 
