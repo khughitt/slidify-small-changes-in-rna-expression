@@ -32,9 +32,18 @@ mode        : selfcontained # {standalone, draft}
     * Are these valid assumptions?
     * What effect do these thresholds have on the loss of biological 
       information?
+
 ---
 
 ## Approach
+
+---
+
+## Results
+
+Figure 1: Example fold changes for markers of early immune response
+
+![Fig1](assets/img/1-s2.0-S1046202313000960-gr1.jpg)
 
 ---
 
