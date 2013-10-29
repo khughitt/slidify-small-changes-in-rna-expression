@@ -28,7 +28,19 @@ mode        : selfcontained # {standalone, draft}
     .references li { font-size: 18px; }
 </style>
 
-## Introduction
+## Overview
+
+---
+
+## Overview
+
+>- Used data from a previous study involving a time-course inflammation response
+with single-molecule sequencing (SMS) RNA-Seq.
+    * LPS stimulation of mice
+    * Control + 5 time-points
+    * 7 replicates (individual mice) per condition
+>- Interested in looking at contribution of low FC genes and their biological
+  relevance.
 
 ---
 
@@ -49,19 +61,6 @@ mode        : selfcontained # {standalone, draft}
     * Are these valid assumptions?
     * What effect do these thresholds have on the loss of biological 
       information?
-
----
-
-## Overview
-
->-Used data from a previous study involving a time-course inflammation response
-with single-molecule sequencing (SMS) RNA-Seq.
-    * LPS stimulation of mice
-    * Control + 5 time-points
-    * 7 replicates (individual mice) per condition
->-Interested in looking at contribution of low FC genes and their biological
-  relevance.
-
 
 --- .segue .dark
 
